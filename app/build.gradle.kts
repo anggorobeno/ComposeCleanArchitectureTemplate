@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.jetbrains.kotlin.kapt)
     alias(libs.plugins.kotlin.parcelize)
-    id("dagger.hilt.android.plugin")
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -83,6 +83,6 @@ dependencies {
 
     // Hilt
     kapt(libs.hilt.compiler)
-    implementation(libs.hilt)
+    implementation(libs.hilt.android)
     implementation(libs.hilt.compose)
 }
